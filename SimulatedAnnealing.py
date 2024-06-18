@@ -103,7 +103,7 @@ def simulated_annealing(queens_matrix):
 
 # Run the Simulated Annealing algorithm
 def main():
-    N = 5
+    N = 8
     GUI.init(N)
     best_board, best_threats = simulated_annealing(rnd_board(N))
 
