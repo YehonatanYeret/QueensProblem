@@ -2,6 +2,7 @@ import random
 import pygame
 import GUI_queens as GUI
 
+
 def threats(board):
     # returns number of threats in board
     count = 0
@@ -69,7 +70,7 @@ def solve(size):
 
 # Main function
 def main():
-    N = 8
+    N = 3
     GUI.init(N)
     solve(N)
 

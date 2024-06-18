@@ -7,6 +7,7 @@ import GUI_queens as GUI
 initial_temp = 1000
 max_iterations = 15000
 
+
 # Create random board with x queens
 def rnd_board(x):
     # returns a board x*x with queens in random cols
@@ -92,7 +93,6 @@ def simulated_annealing(queens_matrix):
         best_distances.append(best_threats)
 
         # Print the current best threats at each iteration
-
         print(f"Iteration {t + 1}: Best Threats = {best_threats}")
 
         if best_threats == 0:
@@ -103,15 +103,16 @@ def simulated_annealing(queens_matrix):
 
 # Run the Simulated Annealing algorithm
 def main():
-    N = 40
+    N = 5
     GUI.init(N)
     best_board, best_threats = simulated_annealing(rnd_board(N))
 
     if best_threats == 0:
         print("\nSolution found:")
-        print_board(best_board)
     else:
         print("\nNo solution found.")
+        pygame.quit()
+        quit()
 
     while True:
         for event in pygame.event.get():
