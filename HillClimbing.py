@@ -70,7 +70,7 @@ def solve(size):
 
 # Main function
 def main():
-    N = 3
+    N = 20
     GUI.init(N)
     solve(N)
 

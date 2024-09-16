@@ -83,7 +83,7 @@ def simulated_annealing(queens_matrix):
 
         if delta_E < 0 or random.random() < math.exp(-delta_E / T):
             current = next_board
-            current_threats = threats(current)
+            current_threats = next_threats
 
         if current_threats < best_threats:
             best_board = current
@@ -103,7 +103,7 @@ def simulated_annealing(queens_matrix):
 
 # Run the Simulated Annealing algorithm
 def main():
-    N = 8
+    N = 20
     GUI.init(N)
     best_board, best_threats = simulated_annealing(rnd_board(N))
 
